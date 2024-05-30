@@ -45,16 +45,18 @@ actions = {
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 
-budget = input("Entrez votre budget : ")
+budget = 3000 # input("Entrez votre budget : ")
 
 chaine = str()
 
 
 def test(chaine, budget):
     if chaine != budget:
-        print(f"{chaine} --- budget = {budget}---")
+        pass
+        # print(f"{chaine} --- budget = {budget}---")
     else:
-        print(f"VOUS AVEZ TROUVÉ --- {chaine} ---")
+        pass
+        # print(f"VOUS AVEZ TROUVÉ --- {chaine} ---")
 
 
 for a in letters:
@@ -83,3 +85,19 @@ def bruteforce(action_cost, total_cost):
 list_action_cost()
 bruteforce("", 1)
 """
+
+
+def inverse_word(word):
+
+    all_letters = [[]] * len(word)
+
+    all_letters.append(word)
+    inverse_word = word[::-1]
+
+
+inverse_word("Augustin")
+
+
+word = "Augustin"
+inverse_word = word[::-1]
+print(inverse_word)

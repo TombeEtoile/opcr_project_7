@@ -1,8 +1,0 @@
-budget = 500
-a + b
-si :
-cette addition est > à budget
-print("valeur trop élevée")
-sinon :
-+ c
-
