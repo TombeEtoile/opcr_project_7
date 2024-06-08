@@ -1,8 +1,14 @@
-actions = {
-    "Action-1": {"coût par action": 20, "bénéfice": "5%"},
-    "Action-2": {"coût par action": 30, "bénéfice": "10%"},
-    "Action-3": {"coût par action": 50, "bénéfice": "15%"},
-    "Action-4": {"coût par action": 70, "bénéfice": "20%"},
-    "Action-5": {"coût par action": 60, "bénéfice": "17%"},
-    "Action-6": {"coût par action": 80, "bénéfice": "25%"},
-}
+import requests
+
+def get_city_description(city_name):
+    url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{city_name}"
+    response = requests.get(url)
+    data = response.json()
+    if 'extract' in data:
+        return data['extract']
+    else:
+        return "Description not available"
+
+city_name = "Paris"
+description = get_city_description(city_name)
+print(description)
